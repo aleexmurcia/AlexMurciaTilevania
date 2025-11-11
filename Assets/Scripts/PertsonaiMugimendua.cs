@@ -17,7 +17,7 @@ public class PertsonaiMugimendua : MonoBehaviour
     CapsuleCollider2D gorputzaCollider2D;
     BoxCollider2D oinakCollider2D;
     float gravityScaleAtStart;
-    bool bizirikDago = true;
+    public bool bizirikDago = true;
 
 
     void Start()
@@ -86,11 +86,12 @@ public class PertsonaiMugimendua : MonoBehaviour
     void Die()
     {
         if(!bizirikDago){ return; }
-        if (gorputzaCollider2D.IsTouchingLayers(LayerMask.GetMask("Etsaiak", "Spikes")) && oinakCollider2D.IsTouchingLayers(LayerMask.GetMask("Etsaiak", "Spikes")))
+        if (gorputzaCollider2D.IsTouchingLayers(LayerMask.GetMask("Etsaiak", "Spikes")) || oinakCollider2D.IsTouchingLayers(LayerMask.GetMask("Etsaiak", "Spikes")))
         {
-            bizirikDago = false;
             animator.SetTrigger("hiltzen");
+            bizirikDago = false;
             nireRigidbody2D.linearVelocity = new Vector2(5f, 15f);
+            FindAnyObjectByType<GameSession>().DeathProcess();
         }
     }
 

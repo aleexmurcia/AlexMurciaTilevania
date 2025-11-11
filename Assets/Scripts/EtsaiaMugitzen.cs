@@ -22,7 +22,7 @@ public class EtsaiaMugitzen : MonoBehaviour
 
     void changeDirection()
     {
-        transform.localScale = new Vector2(-(Mathf.Sign(nireRigidbody2D.linearVelocity.x)), 1f);
+        transform.localScale = new Vector2(-(transform.localScale.x), transform.localScale.y);
     }
 
     void Update()

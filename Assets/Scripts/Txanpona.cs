@@ -3,18 +3,17 @@ using UnityEngine;
 public class Txanpona : MonoBehaviour
 {
     [SerializeField] AudioClip coinSound;
-    AudioSource audioSource;
-    void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
+    [SerializeField] int coinValue = 100;
+    bool isPicked = false;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player") && !isPicked)
         {
+            isPicked = true;
+            AudioSource.PlayClipAtPoint(coinSound, transform.position);
+            FindAnyObjectByType<GameSession>().IncreaseScore(coinValue);
             Destroy(gameObject);
-            audioSource.PlayOneShot(coinSound);
         }
     }
 }
