@@ -23,7 +23,13 @@ public class Izartxoa : MonoBehaviour
     {
         if (other.gameObject.tag == "Etsaia")
         {
-            Destroy(other.gameObject);
+            EtsaiaMugitzen estaia = other.GetComponent<EtsaiaMugitzen>();
+
+            if (estaia != null)
+            {
+                estaia.TakeDamage();
+            }
+            Destroy(gameObject);
         }
         Destroy(gameObject);
     }

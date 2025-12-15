@@ -7,8 +7,8 @@ using UnityEngine.InputSystem;
 public class PertsonaiMugimendua : MonoBehaviour
 {
     Vector2 moveInput;
-    [SerializeField] float speed = 1f;
-    [SerializeField] float jumpSpeed = 1f;
+    [SerializeField] public float speed = 1f;
+    [SerializeField] public float jumpSpeed = 1f;
     [SerializeField] float climbSpeed = 1f;
     [SerializeField] GameObject starPrefab;
     [SerializeField] Transform shootPoint;
@@ -18,6 +18,9 @@ public class PertsonaiMugimendua : MonoBehaviour
     BoxCollider2D oinakCollider2D;
     float gravityScaleAtStart;
     public bool bizirikDago = true;
+    public float scaleMultiplier = 1f;
+    float lastDirection = 1f; 
+
 
 
     void Start()
@@ -76,11 +79,16 @@ public class PertsonaiMugimendua : MonoBehaviour
 
     void FlipSprite()
     {
-        bool playerHasHorizontalSpeed = Mathf.Abs(nireRigidbody2D.linearVelocity.x) > Mathf.Epsilon;
-        if (playerHasHorizontalSpeed)
+        if (Mathf.Abs(nireRigidbody2D.velocity.x) > Mathf.Epsilon)
         {
-            transform.localScale = new Vector2(Mathf.Sign(nireRigidbody2D.linearVelocity.x), 1f);
+            lastDirection = Mathf.Sign(nireRigidbody2D.velocity.x);
         }
+
+        transform.localScale = new Vector3(
+            lastDirection * scaleMultiplier,
+            1f * scaleMultiplier,
+            1f
+        );
     }
 
     void Die()
@@ -90,7 +98,9 @@ public class PertsonaiMugimendua : MonoBehaviour
         {
             animator.SetTrigger("hiltzen");
             bizirikDago = false;
-            nireRigidbody2D.linearVelocity = new Vector2(5f, 15f);
+            nireRigidbody2D.linearVelocity = new Vector2(0f, 15f);
+
+            CameraShake.Instance.Shake(50f, 2f);
             FindAnyObjectByType<GameSession>().DeathProcess();
         }
     }
@@ -99,5 +109,21 @@ public class PertsonaiMugimendua : MonoBehaviour
     {
         if (!bizirikDago) return;
         Instantiate(starPrefab, shootPoint.position, shootPoint.rotation);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Moving"))
+        {
+            transform.SetParent(collision.transform);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Moving"))
+        {
+            transform.SetParent(null);
+        }
     }
 }
