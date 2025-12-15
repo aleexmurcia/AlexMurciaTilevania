@@ -50,9 +50,20 @@ public class GameSession : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        timerAmount = initialTimerAmount;
-        isReloading = false; 
+        LevelTimer levelTimer = FindFirstObjectByType<LevelTimer>();
+
+        if (levelTimer != null)
+        {
+            timerAmount = levelTimer.levelTime;
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ Este nivel no tiene LevelTimer");
+        }
+
+        isReloading = false;
     }
+
 
     void Start()
     {
