@@ -41,7 +41,7 @@ public class PertsonaiMugimendua : MonoBehaviour
     void OnJump(InputValue value)
     {
         if(!bizirikDago) return;
-        if (!oinakCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground"))) return;
+        if (!oinakCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground", "Moving"))) return;
         if (value.isPressed)
         {
             nireRigidbody2D.linearVelocity = new Vector2(nireRigidbody2D.linearVelocity.x, jumpSpeed);
@@ -79,9 +79,9 @@ public class PertsonaiMugimendua : MonoBehaviour
 
     void FlipSprite()
     {
-        if (Mathf.Abs(nireRigidbody2D.velocity.x) > Mathf.Epsilon)
+        if (Mathf.Abs(nireRigidbody2D.linearVelocity.x) > Mathf.Epsilon)
         {
-            lastDirection = Mathf.Sign(nireRigidbody2D.velocity.x);
+            lastDirection = Mathf.Sign(nireRigidbody2D.linearVelocity.x);
         }
 
         transform.localScale = new Vector3(

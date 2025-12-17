@@ -14685,6 +14685,14 @@ PrefabInstance:
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 957103173}
+    - target: {fileID: 3449231244441830087, guid: d17dae19f2b6bde4fb73b54d90604fbc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.744572
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449231244441830087, guid: d17dae19f2b6bde4fb73b54d90604fbc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.04262
+      objectReference: {fileID: 0}
     - target: {fileID: 3715360424391106029, guid: d17dae19f2b6bde4fb73b54d90604fbc, type: 3}
       propertyPath: m_Name
       value: Cameras

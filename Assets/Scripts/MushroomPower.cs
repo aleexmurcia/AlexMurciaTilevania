@@ -25,7 +25,7 @@ public class MushroomPower : MonoBehaviour
 
     void Update()
     {
-        nireRigidbody2D.velocity = new Vector2(speed, nireRigidbody2D.velocity.y);
+        nireRigidbody2D.linearVelocity = new Vector2(speed, nireRigidbody2D.linearVelocity.y);
     }
 
     void OnTriggerExit2D(Collider2D other)

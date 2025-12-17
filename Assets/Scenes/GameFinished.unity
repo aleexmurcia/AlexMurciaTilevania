@@ -633,7 +633,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -20.5236, y: -236}
+  m_AnchoredPosition: {x: 9, y: -236}
   m_SizeDelta: {x: 952.5845, y: 126.3477}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &178812514
@@ -656,7 +656,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '  GAME OVER'
+  m_text: ' GAME FINISHED'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 14705e984ba36994dac19c7c962c76ad, type: 2}
   m_sharedMaterial: {fileID: -6790146286428030657, guid: 14705e984ba36994dac19c7c962c76ad, type: 2}
@@ -792,7 +792,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "            Saiatu Hurrengoan\n            Puntuazioa: "
+  m_text: "            Oso ondo eginda!\n            Puntuazioa: "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 14705e984ba36994dac19c7c962c76ad, type: 2}
   m_sharedMaterial: {fileID: -6790146286428030657, guid: 14705e984ba36994dac19c7c962c76ad, type: 2}

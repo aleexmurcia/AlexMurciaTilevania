@@ -25,8 +25,8 @@ Transform:
   m_GameObject: {fileID: 1159681957271701044}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -240, y: 373, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: -544, y: 373, z: 0}
+  m_LocalScale: {x: 0.30742857, y: 0.30742857, z: 0.30742857}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4057258722017469827}
@@ -347,14 +347,14 @@ RectTransform:
   m_GameObject: {fileID: 4563719735146200099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.61214983, y: 0.61214983, z: 0.61214983}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9137549079403067222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -470, y: -56}
+  m_AnchoredPosition: {x: -130, y: -14}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7101839161622642753
@@ -505,7 +505,7 @@ MonoBehaviour:
   puntuazioaTextua: {fileID: 1809137787791891090}
   playerScore: 0
   timerText: {fileID: 1554102484356455522}
-  timerAmount: 30
+  timerAmount: 180
   numOfHearts: 3
   hearts:
   - {fileID: 2747093703714128534}
