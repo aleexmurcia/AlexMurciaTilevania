@@ -9077,7 +9077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482922643082887513, guid: d698f6a2b1542ea47a58ee3a0f54d594, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.481991
+      value: 4.42
       objectReference: {fileID: 0}
     - target: {fileID: 482922643082887513, guid: d698f6a2b1542ea47a58ee3a0f54d594, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9988,7 +9988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4808520654631572732, guid: 4cc54394e9e0f1043822202593991917, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.87
+      value: -1.956
       objectReference: {fileID: 0}
     - target: {fileID: 4808520654631572732, guid: 4cc54394e9e0f1043822202593991917, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10094,7 +10094,8 @@ PrefabInstance:
       value: Eszena Iraunkorra
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6788123530079241608, guid: 91d06425c28093844a011ccf8c91a77b, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6417575049738185569, guid: 91d06425c28093844a011ccf8c91a77b, type: 3}
       insertIndex: -1
@@ -10415,7 +10416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4808520654631572732, guid: 4cc54394e9e0f1043822202593991917, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.12
+      value: 10.03
       objectReference: {fileID: 0}
     - target: {fileID: 4808520654631572732, guid: 4cc54394e9e0f1043822202593991917, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10798,16 +10799,6 @@ Tilemap:
   m_GameObject: {fileID: 1495440706}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 6, y: -21, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 3, y: -11, z: 0}
     second:
       serializedVersion: 2
@@ -11014,15 +11005,15 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 21
+  - m_RefCount: 20
     m_Data: {fileID: 11400000, guid: 2e1d1e1d7c6f4b541864504c216859ec, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 21
+  - m_RefCount: 20
     m_Data: {fileID: 6723963429988506304, guid: dbeefa4b0525c6544b0b42fc924f7e02, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 20
+  - m_RefCount: 19
     m_Data:
       e00: 1
       e01: 0
@@ -11095,7 +11086,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 21
+  - m_RefCount: 20
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -11469,11 +11460,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3449231244441830087, guid: d17dae19f2b6bde4fb73b54d90604fbc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5247974
+      value: -3.054205
       objectReference: {fileID: 0}
     - target: {fileID: 3449231244441830087, guid: d17dae19f2b6bde4fb73b54d90604fbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.72377
+      value: 8.72367
       objectReference: {fileID: 0}
     - target: {fileID: 3715360424391106029, guid: d17dae19f2b6bde4fb73b54d90604fbc, type: 3}
       propertyPath: m_Name
@@ -11614,7 +11605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4808520654631572732, guid: 4cc54394e9e0f1043822202593991917, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.109
+      value: 1.03
       objectReference: {fileID: 0}
     - target: {fileID: 4808520654631572732, guid: 4cc54394e9e0f1043822202593991917, type: 3}
       propertyPath: m_LocalPosition.z

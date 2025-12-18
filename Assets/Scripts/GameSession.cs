@@ -99,15 +99,18 @@ public class GameSession : MonoBehaviour
             }
         }
 
-        timerAmount -= Time.deltaTime;
-        
+        if (!isReloading && timerAmount > 0f)
+        {
+            timerAmount -= Time.deltaTime;
+            timerAmount = Mathf.Max(timerAmount, 0f); // nunca negativo
+        }
+
         int minutes = Mathf.FloorToInt(timerAmount / 60);
         int seconds = Mathf.FloorToInt(timerAmount % 60);
         timerText.text = string.Format("{0}:{1:00}", minutes, seconds);
 
-        if(timerAmount < 0 && !isReloading)
+        if (timerAmount <= 0f && !isReloading)
         {
-            timerAmount = 0;
             isReloading = true;
             DeathProcess();
         }
